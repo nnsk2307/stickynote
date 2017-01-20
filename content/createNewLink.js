@@ -1,4 +1,4 @@
-function createNew(){
+function createNewLink(){
 var div=document.createElement('div');
 div.className='Notexyz';
 
@@ -53,18 +53,41 @@ htd3.appendChild(hdel);
 
 
 
-var text=document.createElement('textarea');
-text.className='NotexyzText';
-div.appendChild(text);
+// var links=document.createElement('div');
+// links.className='NotexyzLink';
+// div.appendChild(links);
+
+
+var footer=document.createElement('div');
+footer.className='NotexyzFooter';
+
+var about=document.createElement('input');
+about.className="NotexyzAbout";
+footer.appendChild(about);
+
+var url=document.createElement('input');
+url.className="NotexyzUrl";
+footer.appendChild(url);
+
+var button=document.createElement('button');
+button.className="NotexyzButton";
+footer.appendChild(button);
+
+div.appendChild(footer);
 
 document.body.appendChild(div);
 
 
-$(hmini).on('click',function(){
-		$(text).toggle();
+$('.NotexyzMini').on('click',function(){
+		$('.NotexyzText').toggle();
 });
 
-return div;
+
+$('.NotexyzDel').on('click',function(){
+		$('.Notexyz').remove();
+});
+
+$(div).draggable();
 
 }
-
+createNewLink();
