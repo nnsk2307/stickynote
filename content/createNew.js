@@ -1,4 +1,5 @@
-var div=document.createElement('div');
+function createNew(){
+	var div=document.createElement('div');
 div.className='Notexyz';
 
 var head=document.createElement('div');
@@ -58,11 +59,5 @@ div.appendChild(text);
 document.body.appendChild(div);
 
 
-$('.NotexyzMini').on('click',function(){
-		$('.NotexyzText').toggle();
-});
-
-
-$('.NotexyzDel').on('click',function(){
-		$('.Notexyz').remove();
-});
+return div;
+}
