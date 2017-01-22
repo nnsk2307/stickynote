@@ -12,3 +12,23 @@ chrome.contextMenus.onClicked.addListener(function(info){
 		});
 	}
 });
+
+chrome.runtime.onMessage.addListener(function(message, sender, response){
+	if(message.type == 'images'){
+		var del = chrome.extension.getURL('../images/delete.png');
+	var mini = chrome.extension.getURL('../images/minimize.png');
+	console.log(del,mini);
+	f = {'del':del,'mini':mini};
+	response(f);
+}else if(message.type = "contents"){
+		var data1;
+		chrome.storage.local.get(message.url,function(x){
+			data1 = x;
+			console.log(data1);
+		});
+		setTimeout(function(){
+			response(data1);
+		},500);
+		
+	}
+});

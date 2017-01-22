@@ -38,17 +38,16 @@ htr.appendChild(htd3);
 
 var htitle=document.createElement('textarea');
 htitle.className='NotexyzTitle';
-htitle.maxLength=12;
 htd1.appendChild(htitle);
 
 
-var hmini=document.createElement('span');
-hmini.className='NotexyzMini glyphicon glyphicon-minus-sign';
+var hmini=document.createElement('img');
+hmini.className='NotexyzMini';
 htd2.appendChild(hmini);
 
 
-var hdel=document.createElement('span');
-hdel.className='NotexyzDel glyphicon glyphicon-trash';
+var hdel=document.createElement('img');
+hdel.className='NotexyzDel';
 htd3.appendChild(hdel);
 
 
